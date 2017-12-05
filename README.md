@@ -44,6 +44,9 @@ So a fraction is the number of shaded parts divided by the number of equal parts
    
    **number of equal parts**  denominator
    
-   # lesson taken from https://www.mathgoodies.com/lessons/fractions 
+
+***
+
+Now let's take a look at some [other fractions](./display_fractions.html)! 
    
   
