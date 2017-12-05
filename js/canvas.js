@@ -29,8 +29,8 @@ function init(){
 }
 function redraw(forminfo){
     for(var i=1; i <= days; i++) {
-    	var numer = forminfo.numerator;
-	var denom = forminfo.denominator;  
+    	var numer = forminfo[0].value;
+	var denom = forminfo[1].value;  
         drawSegments(i*segmentDepth, numer);
     } 
 }
