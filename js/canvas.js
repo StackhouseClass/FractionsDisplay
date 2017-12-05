@@ -9,10 +9,10 @@ var y = canvas.height / 2;
 var days = 1;
 
 // number of hours
-var hours = 24;
+var denom = 2;
 
-// one segment represents an hour so divide degrees by hours
-var segmentWidth = 360 / hours;
+// one segment represents an hour so divide degrees by denom
+var segmentWidth = 360 / denom;
 
 // begin at 0 and end at one segment width
 var startAngle = 0;
@@ -28,17 +28,19 @@ function init(){
 }
 
 function drawSegments(radius) {
-    var pieAngle = 2 * Math.PI / hours;
+    var pieAngle = 2 * Math.PI / denom;
     
-    for (var i = 0; i < hours; i++) {
+    for (var i = 0; i < denom; i++) {
         context.beginPath();
         
         context.moveTo(x, y);
         context.arc(x, y, radius, i*pieAngle, (i+1)*pieAngle, false);
         context.lineWidth = segmentDepth;
+        //0 is red, 120 is green, 240 is blue
+        var emptyVal = 'hsl(0,100%, 100%)';
         var hueValue = i * 15;
         context.fillStyle = 'hsl(' + hueValue + ',70%, 60%)';
-        // '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+       // context.fillStyle = emptyVal;
         context.fill();
         context.lineWidth = 2;
         context.strokeStyle = '#444';
