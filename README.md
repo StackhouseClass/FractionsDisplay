@@ -1,5 +1,4 @@
-# Fractions
-https://stackhouseclass.github.io/FractionsDisplay/
+# [Fractions](https://stackhouseclass.github.io/FractionsDisplay/)
 
 
 A circle is a geometric shape that we have seen in other lessons. The circle to the left can be used to represent one whole. We can divide this circle into equal parts as shown below.
