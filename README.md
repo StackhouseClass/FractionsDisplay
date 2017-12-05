@@ -2,23 +2,23 @@
 
 A circle is a geometric shape that we have seen in other lessons. The circle to the left can be used to represent one whole. We can divide this circle into equal parts as shown below.
 
-(link to whole cirlce )
+![alt text](./images/circle_whole_white.gif "whole circle")
 
 ***
 This circle has been divided into 2 equal parts. 
-(link to half circle)
+![alt text](./images/circle_halves_white.gif "half circle ")
 ***
 
 This circle has been divided into 3 equal parts. 
-(link to thirds circle)
+![alt text](./images/circle_thirds_white.gif "thirds circle ")
 ***
 
 This circle has been divided into 4 equal parts. 
-(link to 4ths circle)
+![alt text](./images/circle_fourths_white.gif "fourths circle ")
 ***
 
 We can shade a portion of a circle to name a specfic part of the whole as shown below
-(link to half-colored circle)
+![alt text](./images/circle_one_half_red.gif "red half circle")
 
 The shaded portion is 1/2 of the whole circle.
 
@@ -43,3 +43,4 @@ So a fraction is the number of shaded parts divided by the number of equal parts
    
    # lesson taken from https://www.mathgoodies.com/lessons/fractions 
    
+  
