@@ -28,9 +28,10 @@ function init(){
     } 
 }
 function redraw(forminfo){
+	context.clearRect(0, 0, canvas.width, canvas.height);
     for(var i=1; i <= days; i++) {
     	var numer = parseInt(forminfo[0].value);
-	var denom = parseInt(forminfo[1].value);  
+	    denom = parseInt(forminfo[1].value);  
         drawSegments(i*segmentDepth, numer);
     } 
 }
@@ -45,7 +46,7 @@ function drawSegments(radius, numerator) {
         context.arc(x, y, radius, i*pieAngle, (i+1)*pieAngle, false);
         context.lineWidth = segmentDepth;
         //0 is red, 120 is green, 240 is blue
-        context.fillStyle = fillStyleGenerator("red", i<= numerator);
+        context.fillStyle = fillStyleGenerator("red", i< numerator);
        // context.fillStyle = emptyVal;
         context.fill();
         context.lineWidth = 2;
@@ -55,7 +56,7 @@ function drawSegments(radius, numerator) {
 }
 
 function fillStyleGenerator(color, isNumerator) {
-	color = (isNumerator)? 0: color;
+	color = (isNumerator)? color:0;
 	switch(color) {
   	case "red":
     	return 'hsl(0,70%, 60%)';
