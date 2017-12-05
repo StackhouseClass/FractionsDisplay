@@ -21,12 +21,6 @@ var endAngle = segmentWidth;
 // how thick you want a segment
 var segmentDepth = 150;
 
-function init(){
-    for(var i=1; i <= days; i++) {
-    		var numer = 2;
-        drawSegments(i*segmentDepth, numer);
-    } 
-}
 function redraw(forminfo){
 	context.clearRect(0, 0, canvas.width, canvas.height);
     for(var i=1; i <= days; i++) {
@@ -65,5 +59,3 @@ function fillStyleGenerator(color, isNumerator) {
   }
 }
 
-// start drawing our chart
-init();
