@@ -25,10 +25,12 @@ The shaded portion is 1/2 of the whole circle.
 ***
 
 The shaded portion of the whole circle is 2/3 of the whole circle. 
+![alt text](./images/circle_two_thirds_pink.gif "pink two-thirds circle")
 
 ***
 
 The shaded portion os 1/4 of the whole circle. 
+![alt text](./images/circle_one_fourth_blue.gif "blue one-fourth circle")
 
 ***
 The Numbers 1/2, 1/3, and 1/4 are called fractions. 
