@@ -45,7 +45,7 @@ function drawSegments(radius, numerator) {
         context.arc(x, y, radius, i*pieAngle, (i+1)*pieAngle, false);
         context.lineWidth = segmentDepth;
         //0 is red, 120 is green, 240 is blue
-        context.fillStyle = fillStyleGenerator("red", i< numerator);
+        context.fillStyle = fillStyleGenerator("red", i<= numerator);
        // context.fillStyle = emptyVal;
         context.fill();
         context.lineWidth = 2;
