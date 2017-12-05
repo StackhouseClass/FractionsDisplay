@@ -28,8 +28,11 @@ function init(){
 }
 
 function drawSegments(radius) {
+    var pieAngle = 2 * Math.PI / hours;
+    
     for (var i = 0; i < hours; i++) {
         context.beginPath();
+        
         context.moveTo(x, y);
         context.arc(x, y, radius, i*pieAngle, (i+1)*pieAngle, false);
         context.lineWidth = segmentDepth;
