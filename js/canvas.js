@@ -25,7 +25,6 @@ function init(){
     for(var i=1; i <= days; i++) {
     		var numer = 2;
         drawSegments(i*segmentDepth, numer);
-        numer--;
     } 
 }
 
@@ -39,7 +38,7 @@ function drawSegments(radius, numerator) {
         context.arc(x, y, radius, i*pieAngle, (i+1)*pieAngle, false);
         context.lineWidth = segmentDepth;
         //0 is red, 120 is green, 240 is blue
-        context.fillStyle = fillStyleGenerator("red", numerator);
+        context.fillStyle = fillStyleGenerator("red", i< numerator);
        // context.fillStyle = emptyVal;
         context.fill();
         context.lineWidth = 2;
@@ -48,8 +47,8 @@ function drawSegments(radius, numerator) {
     }
 }
 
-function fillStyleGenerator(color, numerator) {
-	color = (numerator===0)? 0: color; 
+function fillStyleGenerator(color, isNumerator) {
+	color = (isNumerator)? 0: color;
 	switch(color) {
   	case "red":
     	return 'hsl(0,70%, 60%)';
