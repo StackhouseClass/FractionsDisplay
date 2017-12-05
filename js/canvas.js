@@ -27,6 +27,13 @@ function init(){
         drawSegments(i*segmentDepth, numer);
     } 
 }
+function redraw(forminfo){
+    for(var i=1; i <= days; i++) {
+    	var numer = forminfo.numerator;
+	var denom = forminfo.denominator;  
+        drawSegments(i*segmentDepth, numer);
+    } 
+}
 
 function drawSegments(radius, numerator) {
     var pieAngle = 2 * Math.PI / denom;
