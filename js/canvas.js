@@ -27,17 +27,19 @@ function init(){
     } 
 }
 
-function drawSegments(radius) {   
-    for(var i = 0; i < hours; i++){         
-      context.beginPath();
-      context.arc(x, y, radius, (startAngle * Math.PI / 180), (endAngle * Math.PI / 180), false);
-      context.lineWidth = segmentDepth;
-      context.strokeStyle = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
-      context.stroke();
-
-      // increase per segment        
-      startAngle += segmentWidth;
-      endAngle += segmentWidth;
+function drawSegments(radius) {
+    for (var i = 0; i < hours; i++) {
+        context.beginPath();
+        context.moveTo(x, y);
+        context.arc(x, y, radius, i*pieAngle, (i+1)*pieAngle, false);
+        context.lineWidth = segmentDepth;
+        var hueValue = i * 15;
+        context.fillStyle = 'hsl(' + hueValue + ',70%, 60%)';
+        // '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+        context.fill();
+        context.lineWidth = 2;
+        context.strokeStyle = '#444';
+        context.stroke();
     }
 }
 
