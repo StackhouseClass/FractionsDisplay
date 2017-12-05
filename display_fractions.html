@@ -2,6 +2,25 @@
 <html>
 <head>
   <title> Displaying Fractions </title>
+  <script>
+$( document ).ready(function() {
+    $("form").submit(function(e) {
+        e.preventDefault(); // prevent page refresh
+
+        $.ajax({
+            type: "POST",
+            url: "jump_invoicepaid.php",
+            data: $(this).serialize(), // serialize form data
+            success: function(data) {
+                // Success ...
+            },
+            error: function() {
+                // Error ...
+            }
+        });
+    });
+});
+</script>
 </head>
 <body>
 
