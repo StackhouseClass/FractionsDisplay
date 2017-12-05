@@ -9,7 +9,7 @@ var y = canvas.height / 2;
 var days = 1;
 
 // number of hours
-var denom = 2;
+var denom = 5;
 
 // one segment represents an hour so divide degrees by denom
 var segmentWidth = 360 / denom;
@@ -23,11 +23,13 @@ var segmentDepth = 150;
 
 function init(){
     for(var i=1; i <= days; i++) {
-        drawSegments(i*segmentDepth);
+    		var numer = 2;
+        drawSegments(i*segmentDepth, numer);
+        numer--;
     } 
 }
 
-function drawSegments(radius) {
+function drawSegments(radius, numerator) {
     var pieAngle = 2 * Math.PI / denom;
     
     for (var i = 0; i < denom; i++) {
@@ -37,15 +39,23 @@ function drawSegments(radius) {
         context.arc(x, y, radius, i*pieAngle, (i+1)*pieAngle, false);
         context.lineWidth = segmentDepth;
         //0 is red, 120 is green, 240 is blue
-        var emptyVal = 'hsl(0,100%, 100%)';
-        var hueValue = i * 15;
-        context.fillStyle = 'hsl(' + hueValue + ',70%, 60%)';
+        context.fillStyle = fillStyleGenerator("red", numerator);
        // context.fillStyle = emptyVal;
         context.fill();
         context.lineWidth = 2;
         context.strokeStyle = '#444';
         context.stroke();
     }
+}
+
+function fillStyleGenerator(color, numerator) {
+	color = (numerator===0)? 0: color; 
+	switch(color) {
+  	case "red":
+    	return 'hsl(0,70%, 60%)';
+    default:
+    	return 'hsl(0,100%, 100%)';
+  }
 }
 
 // start drawing our chart
